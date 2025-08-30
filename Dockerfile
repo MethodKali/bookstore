@@ -28,7 +28,7 @@ RUN apt-get update && apt-get -y install libpq-dev gcc \
 
 WORKDIR $PYSETUP_PATH
 
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml ./
 
 RUN poetry install --no-dev
 
