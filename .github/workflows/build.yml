@@ -4,23 +4,35 @@ on: [push]
 
 jobs:
   build:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.10, 3.12]   # 🔹 Ajustado para rodar em 3.10
+
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: "3.10"
+        python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
       run: |
+        python -m ensurepip
         python -m pip install --upgrade pip
-        python -m pip install poetry
+        python -m pip install --upgrade poetry
+
+    - name: View poetry --help
+      run: poetry --help
 
     - name: Install dependencies
       run: poetry install
 
-    - name: Run tests
-      run: poetry run python manage.py test
+    - name: Test
+      env:
+        DJANGO_ALLOWED_HOSTS: localhost   # 🔹 Adicionado para evitar erro no settings.py
+      run: |
+        poetry run python manage.py test
