@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   qa:
     name: Quality check
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     env:
       SECRET_KEY: "django-insecure-test-key"
     steps:
