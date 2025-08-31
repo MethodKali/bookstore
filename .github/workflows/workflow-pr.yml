@@ -1,5 +1,6 @@
 name: Python Pull Request Workflow
 on: [pull_request]
+
 jobs:
   qa:
     name: Quality check
@@ -16,11 +17,10 @@ jobs:
 
       - name: Install Poetry and dependencies
         run: |
-          pip install -U pip
-          pip install poetry
-          poetry install
-        env:
-          POETRY_VIRTUALENVS_CREATE: false
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+          poetry config virtualenvs.create false
+          poetry install --no-interaction --no-ansi
 
       - name: Test
         run: poetry run python manage.py test
