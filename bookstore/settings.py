@@ -145,6 +145,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-SECRET_KEY = os.environ.get("SECRET_KEY")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
 DEBUG = int(os.environ.get("DEBUG", default=0))
