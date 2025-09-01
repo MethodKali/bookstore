@@ -21,7 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = "r0acar&tw&6to#v6pbm53%hq=y*vd#w@j)5a3q-0a@ui3dt3(1"
+=======
+SECRET_KEY = "django-insecure-kf_*0&785m^t!2up^_k1=*2hay0y1cb8vheql@%^3*s=@!fz(m"
+>>>>>>> bbb07ee8b2c73632e5b45c1694abbf76d8c5c3c4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,7 +59,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+<<<<<<< HEAD
     "whitenoise.middleware.WhiteNoiseMiddleware",
+=======
+>>>>>>> bbb07ee8b2c73632e5b45c1694abbf76d8c5c3c4
 ]
 
 ROOT_URLCONF = "bookstore.urls"
@@ -76,8 +83,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "bookstore.wsgi.application"
+<<<<<<< HEAD
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressesManifestStaticFilesStorage'
+=======
+>>>>>>> bbb07ee8b2c73632e5b45c1694abbf76d8c5c3c4
 
 
 # Database
@@ -148,6 +158,12 @@ REST_FRAMEWORK = {
     ],
 }
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-7388474de5f7.herokuapp.com/']
 #SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
 #DEBUG = int(os.environ.get("DEBUG", default=0))
+=======
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
+DEBUG = int(os.environ.get("DEBUG", default=0))
+>>>>>>> bbb07ee8b2c73632e5b45c1694abbf76d8c5c3c4
