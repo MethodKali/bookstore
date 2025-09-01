@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "bookstore.wsgi.application"
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressesManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Database
