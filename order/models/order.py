@@ -6,3 +6,4 @@ from product.models.product import Product
 class Order(models.Model):
     product = models.ManyToManyField(Product, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
