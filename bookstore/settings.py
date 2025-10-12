@@ -28,18 +28,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-7388474de5f7.herokuap
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "django_extensions",
-    "rest_framework",
-    "order",
-    "product",
-    "debug_toolbar",
-    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [
