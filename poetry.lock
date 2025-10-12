@@ -95,6 +95,7 @@ files = [
     {file = "black-25.1.0.tar.gz", hash = "sha256:33496d5cd1222ad73391352b4ae8da15253c5de89b93a80b3e2c8d9a19ec2666"},
 ]
 
+
 [package.dependencies]
 click = ">=8.0.0"
 mypy-extensions = ">=0.4.3"
@@ -111,6 +112,7 @@ jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
+
 name = "click"
 version = "8.2.1"
 description = "Composable command line interface toolkit"
@@ -121,6 +123,7 @@ files = [
     {file = "click-8.2.1-py3-none-any.whl", hash = "sha256:61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b"},
     {file = "click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"},
 ]
+
 
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
@@ -143,6 +146,7 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+
 name = "factory-boy"
 version = "3.3.3"
 description = "A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby."
@@ -179,12 +183,14 @@ files = [
     {file = "flake8-4.0.1.tar.gz", hash = "sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d"},
 ]
 
+
 [package.dependencies]
 mccabe = ">=0.6.0,<0.7.0"
 pycodestyle = ">=2.8.0,<2.9.0"
 pyflakes = ">=2.4.0,<2.5.0"
 
 [[package]]
+
 name = "gitdb"
 version = "4.0.12"
 description = "Git Object Database"
@@ -196,10 +202,12 @@ files = [
     {file = "gitdb-4.0.12.tar.gz", hash = "sha256:5ef71f855d191a3326fcfbc0d5da835f26b13fbcba60c32c21091c349ffdb571"},
 ]
 
+
 [package.dependencies]
 smmap = ">=3.0.1,<6"
 
 [[package]]
+
 name = "gitpython"
 version = "3.1.45"
 description = "GitPython is a Python library used to interact with Git repositories"
@@ -211,10 +219,13 @@ files = [
     {file = "gitpython-3.1.45.tar.gz", hash = "sha256:85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c"},
 ]
 
+
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
 
 [package.extras]
+rsions = ">=3.9"
+
 doc = ["sphinx (>=7.1.2,<7.2)", "sphinx-autodoc-typehints", "sphinx_rtd_theme"]
 test = ["coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock ; python_version < \"3.8\"", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar", "typing-extensions ; python_version < \"3.11\""]
 
@@ -230,6 +241,7 @@ files = [
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 
+
 [package.dependencies]
 setuptools = ">=3.0"
 
@@ -244,6 +256,7 @@ name = "iniconfig"
 version = "2.1.0"
 description = "brain-dead simple config-ini parsing"
 category = "main"
+
 optional = false
 python-versions = ">=3.8"
 
@@ -286,11 +299,13 @@ files = [
     {file = "mypy_extensions-1.1.0.tar.gz", hash = "sha256:52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558"},
 ]
 
+
 [[package]]
 name = "packaging"
 version = "25.0"
 description = "Core utilities for Python packages"
 category = "main"
+
 optional = false
 python-versions = ">=3.8"
 
@@ -318,6 +333,7 @@ files = [
     {file = "platformdirs-4.4.0.tar.gz", hash = "sha256:ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"},
 ]
 
+
 [package.extras]
 docs = ["furo (>=2024.8.6)", "proselint (>=0.14)", "sphinx (>=8.1.3)", "sphinx-autodoc-typehints (>=3)"]
 test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.4)", "pytest-cov (>=6)", "pytest-mock (>=3.14)"]
@@ -336,6 +352,7 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark", "coverage"]
 
 [[package]]
+
 name = "py"
 version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
@@ -404,6 +421,7 @@ files = [
     {file = "setuptools-80.9.0.tar.gz", hash = "sha256:f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"},
 ]
 
+
 [package.extras]
 check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\"", "ruff (>=0.8.0) ; sys_platform != \"cygwin\""]
 core = ["importlib_metadata (>=6) ; python_version < \"3.10\"", "jaraco.functools (>=4)", "jaraco.text (>=3.7)", "more_itertools", "more_itertools (>=8.8)", "packaging (>=24.2)", "platformdirs (>=4.2.2)", "tomli (>=2.0.1) ; python_version < \"3.11\"", "wheel (>=0.43.0)"]
@@ -444,6 +462,22 @@ version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 
 [[package]]
+name = "tomli"
+version = "2.3.0"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "typing-extensions"
+version = "4.15.0"
+description = "Backported and Experimental Type Hints for Python 3.9+"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[[package]]
 name = "tzdata"
 version = "2025.2"
 description = "Provider of IANA time zone data"
@@ -463,7 +497,34 @@ files = [
     {file = "whitenoise-5.3.0.tar.gz", hash = "sha256:d234b871b52271ae7ed6d9da47ffe857c76568f11dd30e28e18c5869dbd11e12"},
 ]
 
+
 [package.extras]
 brotli = ["Brotli"]
 
 [metadata]
+
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "d5371cb924cc3c1b9ecb0f6be2679b46103355afe125e9e985a06530f88d6c5e"
+
+[metadata.files]
+asgiref = []
+colorama = []
+django = []
+django-debug-toolbar = []
+django-extensions = []
+django-rest-framework = []
+djangorestframework = []
+exceptiongroup = []
+factory-boy = []
+faker = []
+iniconfig = []
+packaging = []
+pluggy = []
+pygments = []
+pytest = []
+sqlparse = []
+tomli = []
+typing-extensions = []
+tzdata = []
+
