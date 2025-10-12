@@ -1,0 +1,12 @@
+docker rm -vf $(docker ps -aq)
+docker rmi -f $(docker images -aq)
+docker volume rm $(docker volume ls -qf dangling=true)
+docker volume prune
+docker compose up -d --build
+docker compose down
+docker compose up
+docker compose up -d 
+docker compose exec web python manage.py migrate
+docker compose exec web python manage.py test
+
+
