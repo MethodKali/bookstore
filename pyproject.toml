@@ -1,23 +1,24 @@
 [tool.poetry]
 name = "bookstore"
 version = "0.1.0"
-description = "bookstore"
-authors = ["MethodKali <kerlesalves@gmail.com>"]
-readme = "README.md"
+description = "Bookstore API"
+authors = ["Method_Kali <kerlesalves@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.10"
-
-django = ">=5.2.5,<6.0.0"
-djangorestframework = ">=3.15.0"
-django-extensions = ">=4.1,<5.0"
-django-debug-toolbar = ">=6.0.0,<7.0.0"
-pytest = ">=8.4.1,<9.0.0"
-factory-boy = ">=3.3.3,<4.0.0"
-psycopg2-binary = "^2.9"
+python = "^3.10"
+Django = "^5.2.7"
+django-rest-framework = "^0.1.0"
+django-extensions = "^4.1"
+django-debug-toolbar = "^6.0.0"
+psycopg2-binary = "^2.9.11"
+autopep8 = "^2.3.2"
+isort = "^7.0.0"
 flake8 = "^7.3.0"
-black = "^25.1.0"
+pytest = "^8.4.2"
+factory-boy = "^3.3.3"
+
+[tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
