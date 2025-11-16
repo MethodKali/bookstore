@@ -21,9 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 DEBUG = True
 SECRET_KEY = "r0acar&tw&6to#v6pbm53%hq=y*vd#w@j)5a3q-0a@ui3dt3(1"
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-7388474de5f7.herokuapp.com']
-
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-ebac-fa1093db4f94.herokuapp.com']
 
 # Application definition
 
@@ -40,7 +38,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
-
 ]
 
 ROOT_URLCONF = "bookstore.urls"
@@ -135,6 +132,11 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
     ],
 }
+#ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
+DEBUG = int(os.environ.get("DEBUG", default=0))
 
-#SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
-#DEBUG = int(os.environ.get("DEBUG", default=0))
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
