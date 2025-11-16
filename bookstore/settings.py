@@ -72,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "bookstore.wsgi.application"
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Database
@@ -146,8 +145,6 @@ REST_FRAMEWORK = {
     ],
 }
 #ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
-SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-test-key")
-DEBUG = int(os.environ.get("DEBUG", default=0))
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
