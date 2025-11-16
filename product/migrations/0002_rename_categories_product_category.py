@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('product', '0001_initial'),
-
+    ]
     operations = [
         migrations.RenameField(
             model_name='product',
