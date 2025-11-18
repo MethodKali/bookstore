@@ -13,7 +13,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Versão estável
+          node-version: '18' 
+          
       - name: Install Heroku CLI
         run: npm install -g heroku
         
