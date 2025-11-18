@@ -22,7 +22,7 @@ factory-boy = "^3.3.3"
 black = "^25.1.0"
 
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
 factory-boy = "^3.2.0"
 [build-system]
