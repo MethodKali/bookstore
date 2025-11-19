@@ -1,4 +1,5 @@
 FROM python:3.10-slim AS python-base
+ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1 \
 	PYTHONDONTWRITEBYTECODE=1 \
 	\
@@ -29,7 +30,7 @@ WORKDIR $PYSETUP_PATH
 
 COPY pyproject.toml poetry.lock ./
 
-RUN poetry install --only main 
+RUN poetry install --only main --no-root
 
 WORKDIR /app
 
