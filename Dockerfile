@@ -30,7 +30,7 @@ WORKDIR $PYSETUP_PATH
 
 COPY pyproject.toml poetry.lock ./
 
-RUN poetry install --only main 
+RUN poetry install --only main --no-root
 
 WORKDIR /app
 
