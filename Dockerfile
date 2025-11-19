@@ -1,4 +1,5 @@
 FROM python:3.10-slim AS python-base
+ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1 \
 	PYTHONDONTWRITEBYTECODE=1 \
 	\
